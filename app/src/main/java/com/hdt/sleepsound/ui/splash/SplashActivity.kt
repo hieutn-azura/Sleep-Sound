@@ -5,7 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.lifecycle.lifecycleScope
-import com.ag.sampleadsfirstflow.base.BaseActivity
+import com.hdt.sleepsound.base.BaseActivity
 import com.hdt.sleepsound.MainActivity
 import com.hdt.sleepsound.databinding.ActivitySplashBinding
 import kotlinx.coroutines.delay

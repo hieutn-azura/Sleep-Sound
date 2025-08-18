@@ -1,4 +1,4 @@
-package com.ag.sampleadsfirstflow.base
+package com.hdt.sleepsound.base
 
 import android.content.Context
 import android.graphics.Color
@@ -16,8 +16,8 @@ import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import androidx.viewbinding.ViewBinding
-import com.ag.sampleadsfirstflow.utils.PreferenceHelper
-import com.ag.sampleadsfirstflow.utils.extensions.setWidthPercent
+import com.hdt.sleepsound.utils.PreferenceHelper
+import com.hdt.sleepsound.utils.extensions.setWidthPercent
 import org.koin.android.ext.android.inject
 
 abstract class BaseDialogFragment<VB : ViewBinding> : DialogFragment() {

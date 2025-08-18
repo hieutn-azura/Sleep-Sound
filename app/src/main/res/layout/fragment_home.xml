@@ -10,9 +10,10 @@
         android:id="@+id/rl_appbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingHorizontal="@dimen/dp_16"
-        android:paddingVertical="@dimen/dp_16"
         android:background="@color/primary"
+        android:paddingHorizontal="@dimen/dp_16"
+        android:paddingTop="@dimen/dp_40"
+        android:paddingBottom="@dimen/dp_16"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
@@ -33,7 +34,84 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/rl_appbar">
 
+        <TextView
+            android:id="@+id/btn_sound"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0"
+            android:background="@drawable/bg_item_home"
+            android:fontFamily="@font/roboto_500"
+            android:gravity="center"
+            android:text="@string/sound"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_20"
+            app:layout_constraintDimensionRatio="3:1"
+            app:layout_constraintTop_toTopOf="parent" />
 
+        <TextView
+            android:id="@+id/btn_record"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_0"
+            android:layout_marginTop="@dimen/dp_16"
+            android:background="@drawable/bg_item_home"
+            android:text="@string/record"
+            android:gravity="center"
+            android:textSize="@dimen/sp_20"
+            android:fontFamily="@font/roboto_500"
+            android:textColor="@color/white"
+            app:layout_constraintDimensionRatio="2.5:1"
+            app:layout_constraintEnd_toStartOf="@id/btn_my_sound"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_sound" />
+
+        <TextView
+            android:id="@+id/btn_my_sound"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_0"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_16"
+            android:background="@drawable/bg_item_home"
+            app:layout_constraintDimensionRatio="2.5:1"
+            android:text="@string/my_sound"
+            android:gravity="center"
+            android:textSize="@dimen/sp_20"
+            android:fontFamily="@font/roboto_500"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btn_record"
+            app:layout_constraintTop_toBottomOf="@id/btn_sound" />
+
+        <TextView
+            android:id="@+id/btn_setting"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_0"
+            android:layout_marginTop="@dimen/dp_16"
+            android:background="@drawable/bg_item_home"
+            android:text="@string/setting"
+            android:gravity="center"
+            android:textSize="@dimen/sp_20"
+            android:fontFamily="@font/roboto_500"
+            android:textColor="@color/white"
+            app:layout_constraintDimensionRatio="2.5:1"
+            app:layout_constraintEnd_toStartOf="@id/btn_mix_sound"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_record" />
+
+        <TextView
+            android:id="@+id/btn_mix_sound"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_0"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_16"
+            android:text="@string/mix_sound"
+            android:gravity="center"
+            android:textSize="@dimen/sp_20"
+            android:fontFamily="@font/roboto_500"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_item_home"
+            app:layout_constraintDimensionRatio="2.5:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btn_setting"
+            app:layout_constraintTop_toBottomOf="@id/btn_record" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,4 @@
-package com.ag.sampleadsfirstflow.base
+package com.hdt.sleepsound.base
 
 import android.app.Dialog
 import android.graphics.Color

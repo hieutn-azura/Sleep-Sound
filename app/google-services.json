@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "757742402515",
+    "project_id": "sleep-sound-a528e",
+    "storage_bucket": "sleep-sound-a528e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:757742402515:android:1f2353bdaab49f93d80d26",
+        "android_client_info": {
+          "package_name": "com.hdt.sleepsound"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEp2rpXBRyCFFHEfgq45bgjs1txVGvhAQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

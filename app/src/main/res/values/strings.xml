@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Sleep Sound</string>
+    <string name="sound">Sound</string>
+    <string name="record">Record</string>
+    <string name="my_sound">My sound</string>
+    <string name="setting">Setting</string>
+    <string name="mix_sound">Mix sound</string>
+
+    <string name="setting_policy">Privacy Policy</string>
+    <string name="setting_term">Terms of Use</string>
+    <string name="setting_share_app">Share app</string>
+    <string name="setting_rate_app">Rate app</string>
 </resources>

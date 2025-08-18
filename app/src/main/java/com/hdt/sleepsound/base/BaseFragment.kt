@@ -1,4 +1,4 @@
-package com.ag.sampleadsfirstflow.base
+package com.hdt.sleepsound.base
 
 import android.content.Context
 import android.os.Bundle
@@ -9,9 +9,8 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
-import com.ag.sampleadsfirstflow.ui.home.MainActivity
-import com.ag.sampleadsfirstflow.utils.PreferenceHelper
-import com.ag.sampleadsfirstflow.utils.extensions.hideSystemBar
+import com.hdt.sleepsound.utils.PreferenceHelper
+import com.hdt.sleepsound.utils.extensions.hideSystemBar
 import org.koin.android.ext.android.inject
 
 abstract class BaseFragment<VB: ViewBinding>: Fragment() {
@@ -19,8 +18,6 @@ abstract class BaseFragment<VB: ViewBinding>: Fragment() {
     protected lateinit var myContext: Context
     private var _binding: VB? = null
     val binding: VB get() = _binding!!
-
-    val mainActivity by lazy { activity as MainActivity }
 
     protected abstract fun inflateBinding(inflater: LayoutInflater): VB
 
