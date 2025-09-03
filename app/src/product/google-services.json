@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1060124397112",
+    "project_id": "sleep-sound-product",
+    "storage_bucket": "sleep-sound-product.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1060124397112:android:150fa10e12514888aae0cd",
+        "android_client_info": {
+          "package_name": "com.sleepy.baby.relaxmusic.sleepcycle.relaxation.sleepsounds.whitenoise.rainsounds.sleeptrack.sleepo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFRrxeArJggFHmKHXa8DLJLCbete3tbh4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

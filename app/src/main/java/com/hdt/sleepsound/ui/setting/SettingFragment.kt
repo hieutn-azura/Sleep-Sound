@@ -6,6 +6,7 @@ import android.view.View
 import androidx.core.view.isVisible
 import com.hdt.sleepsound.base.BaseFragment
 import com.hdt.sleepsound.databinding.FragmentSettingBinding
+import com.hdt.sleepsound.ui.dialog.RatingDialog
 import com.hdt.sleepsound.utils.extensions.openUrl
 import com.hdt.sleepsound.utils.extensions.popBackStack
 import com.hdt.sleepsound.utils.extensions.shareApp
@@ -14,8 +15,8 @@ import com.hdt.sleepsound.utils.extensions.showDialog
 class SettingFragment: BaseFragment<FragmentSettingBinding>() {
 
     companion object {
-        private const val POLICY = "https://docs.google.com/document/d/e/2PACX-1vQnpsXaclusmzKsFkZ0ygceNKua9_VnfqgM6pivCYYxXBknteDyqPblURgAMxzkpsU7u-vunvCoIFA1/pub"
-        private const val TERM = "https://docs.google.com/document/d/e/2PACX-1vTqj7nfI2r6o3xKHRgjtTH88djvvPH9XLCm0OrtFWK13oocobOxynsKM7Yue3nS5PxCMf1hC_ZgLXoW/pub"
+        private const val POLICY = "https://docs.google.com/document/d/e/2PACX-1vSDu_TJaGINl6Fg0CWTO1zV59oGbNnXaHNNGBFtm5vpZAD9l3zzTkX2Isnu-H-JZg/pub"
+        private const val TERM = "https://docs.google.com/document/d/e/2PACX-1vRqTS9Gb7i9A5Rg7pIOlBJMR84iCfPheyAxIjBM7-q4Jx-8fTsH5n0u-P5bAPqUyQ/pub"
     }
 
     override fun isDisplayCutout(): Boolean = true
@@ -28,8 +29,11 @@ class SettingFragment: BaseFragment<FragmentSettingBinding>() {
         binding.btnBack.setOnClickListener { popBackStack() }
         binding.rlRate.isVisible = !preferenceHelper.isRated
         binding.rlRate.setOnClickListener {
-            showDialog(RatingDialog {
-                binding.rlRate.isVisible = !preferenceHelper.isRated
+            showDialog(RatingDialog().apply {
+                setListener {
+                    updateRate()
+                }
+
             })
         }
         binding.rlShare.setOnClickListener {
@@ -42,5 +46,9 @@ class SettingFragment: BaseFragment<FragmentSettingBinding>() {
             openUrl(TERM)
         }
 
+    }
+
+    private fun updateRate() {
+        binding.rlRate.isVisible = !preferenceHelper.isRated
     }
 }

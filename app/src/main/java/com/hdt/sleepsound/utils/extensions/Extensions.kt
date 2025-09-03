@@ -1,9 +1,12 @@
 package com.hdt.sleepsound.utils.extensions
 
 import android.content.Context
+import android.content.Intent
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
+import android.net.Uri
 import android.os.Build
+import android.provider.Settings
 import android.view.View
 import android.view.Window
 import android.view.WindowManager
@@ -15,6 +18,7 @@ import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
+import com.hdt.sleepsound.data.model.MixSoundModel
 import kotlin.math.abs
 
 fun Window.setFullScreen() {
@@ -84,4 +88,22 @@ fun getPagerTransformer () :CompositePageTransformer {
         view.alpha = 1.0f - (1.0f - 0.3f) * absPosition
     }
     return compositePageTransformer
+}
+
+fun openSettingApplication(context: Context) {
+    val intent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS)
+    val uri = Uri.fromParts("package", context.packageName, null)
+    intent.setData(uri)
+    context.startActivity(intent)
+}
+
+fun List<MixSoundModel>.resetSelection(): List<MixSoundModel> {
+    return map { model ->
+        when (model) {
+            is MixSoundModel.CategoryItem -> model.copy(
+                items = model.items.map { it.copy(isSelected = false) }
+            )
+            else -> model
+        }
+    }
 }

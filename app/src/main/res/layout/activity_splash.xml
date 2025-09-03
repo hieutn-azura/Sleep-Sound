@@ -43,6 +43,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintWidth_percent="0.66"
         app:layout_marginBaseline="@dimen/dp_2"
-        app:trackColor="@color/black_24"
+        app:trackColor="@color/black_30"
         app:trackThickness="@dimen/dp_4" />
 </androidx.constraintlayout.widget.ConstraintLayout>

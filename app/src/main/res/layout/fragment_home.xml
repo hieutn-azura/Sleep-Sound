@@ -1,117 +1,193 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="@drawable/bg_app">
 
-    <RelativeLayout
-        android:id="@+id/rl_appbar"
+    <LinearLayout
+        android:id="@+id/btn_sleep_sound"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/primary"
+        android:layout_marginHorizontal="@dimen/dp_24"
+        android:layout_marginTop="@dimen/dp_50"
+        android:background="@drawable/bg_item_home"
+        android:gravity="center"
+        android:orientation="horizontal"
         android:paddingHorizontal="@dimen/dp_16"
-        android:paddingTop="@dimen/dp_40"
-        android:paddingBottom="@dimen/dp_16"
+        android:paddingVertical="@dimen/dp_16"
         app:layout_constraintTop_toTopOf="parent">
 
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_120"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:src="@drawable/img_sound_sleep" />
+
         <TextView
-            android:id="@+id/tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dp_12"
-            android:fontFamily="@font/roboto_700"
-            android:text="@string/app_name"
-            android:textColor="@color/white"
-            android:textSize="@dimen/sp_18" />
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/roboto_600"
+            android:gravity="center"
+            android:lines="2"
+            android:paddingHorizontal="@dimen/dp_20"
+            android:text="@string/sound_sleep"
+            android:textColor="@color/primary"
+            android:textSize="@dimen/sp_24" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/btn_record"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_24"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:background="@drawable/bg_item_home"
+        android:paddingHorizontal="@dimen/dp_16"
+        android:paddingVertical="@dimen/dp_16"
+        app:layout_constraintEnd_toStartOf="@id/btn_my_sound"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_sleep_sound">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/img_record" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_record"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/dp_4"
+            android:fontFamily="@font/roboto_600"
+            android:text="@string/record"
+            android:textColor="@color/primary"
+            android:textSize="@dimen/sp_24" />
     </RelativeLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_0"
-        android:padding="@dimen/dp_16"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rl_appbar">
+    <RelativeLayout
+        android:id="@+id/btn_my_sound"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_24"
+        android:background="@drawable/bg_item_home"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/dp_16"
+        android:paddingVertical="@dimen/dp_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_record"
+        app:layout_constraintTop_toBottomOf="@id/btn_sleep_sound">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_my_sound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/img_my_sound" />
 
         <TextView
-            android:id="@+id/btn_sound"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/dp_0"
-            android:background="@drawable/bg_item_home"
-            android:fontFamily="@font/roboto_500"
-            android:gravity="center"
-            android:text="@string/sound"
-            android:textColor="@color/white"
-            android:textSize="@dimen/sp_20"
-            app:layout_constraintDimensionRatio="3:1"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/btn_record"
-            android:layout_width="@dimen/dp_0"
-            android:layout_height="@dimen/dp_0"
-            android:layout_marginTop="@dimen/dp_16"
-            android:background="@drawable/bg_item_home"
-            android:text="@string/record"
-            android:gravity="center"
-            android:textSize="@dimen/sp_20"
-            android:fontFamily="@font/roboto_500"
-            android:textColor="@color/white"
-            app:layout_constraintDimensionRatio="2.5:1"
-            app:layout_constraintEnd_toStartOf="@id/btn_my_sound"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btn_sound" />
-
-        <TextView
-            android:id="@+id/btn_my_sound"
-            android:layout_width="@dimen/dp_0"
-            android:layout_height="@dimen/dp_0"
-            android:layout_marginStart="@dimen/dp_16"
-            android:layout_marginTop="@dimen/dp_16"
-            android:background="@drawable/bg_item_home"
-            app:layout_constraintDimensionRatio="2.5:1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_my_sound"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/dp_4"
+            android:fontFamily="@font/roboto_600"
             android:text="@string/my_sound"
-            android:gravity="center"
-            android:textSize="@dimen/sp_20"
-            android:fontFamily="@font/roboto_500"
-            android:textColor="@color/white"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/btn_record"
-            app:layout_constraintTop_toBottomOf="@id/btn_sound" />
+            android:textColor="@color/primary"
+            android:textSize="@dimen/sp_24" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/btn_mix_sound"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_24"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:background="@drawable/bg_item_home"
+        android:paddingHorizontal="@dimen/dp_16"
+
+        android:paddingVertical="@dimen/dp_16"
+        app:layout_constraintEnd_toStartOf="@id/btn_setting"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_record">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_mix_sound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/img_mix_sound" />
 
         <TextView
-            android:id="@+id/btn_setting"
-            android:layout_width="@dimen/dp_0"
-            android:layout_height="@dimen/dp_0"
-            android:layout_marginTop="@dimen/dp_16"
-            android:background="@drawable/bg_item_home"
-            android:text="@string/setting"
-            android:gravity="center"
-            android:textSize="@dimen/sp_20"
-            android:fontFamily="@font/roboto_500"
-            android:textColor="@color/white"
-            app:layout_constraintDimensionRatio="2.5:1"
-            app:layout_constraintEnd_toStartOf="@id/btn_mix_sound"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btn_record" />
-
-        <TextView
-            android:id="@+id/btn_mix_sound"
-            android:layout_width="@dimen/dp_0"
-            android:layout_height="@dimen/dp_0"
-            android:layout_marginStart="@dimen/dp_16"
-            android:layout_marginTop="@dimen/dp_16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_mix_sound"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/dp_4"
+            android:fontFamily="@font/roboto_600"
             android:text="@string/mix_sound"
-            android:gravity="center"
-            android:textSize="@dimen/sp_20"
-            android:fontFamily="@font/roboto_500"
-            android:textColor="@color/white"
-            android:background="@drawable/bg_item_home"
-            app:layout_constraintDimensionRatio="2.5:1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/btn_setting"
-            app:layout_constraintTop_toBottomOf="@id/btn_record" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:textColor="@color/primary"
+            android:textSize="@dimen/sp_24" />
+    </RelativeLayout>
 
+    <RelativeLayout
+        android:id="@+id/btn_setting"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_24"
+        android:background="@drawable/bg_item_home"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/dp_16"
+        android:paddingVertical="@dimen/dp_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_mix_sound"
+        app:layout_constraintTop_toBottomOf="@id/btn_my_sound">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_setting"
+            android:layout_width="@dimen/dp_80"
+            android:layout_height="@dimen/dp_80"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/img_setting" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_setting"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/dp_4"
+            android:fontFamily="@font/roboto_600"
+            android:text="@string/setting"
+            android:textColor="@color/primary"
+            android:textSize="@dimen/sp_24" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_loading"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_30">
+
+        <ProgressBar
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/white"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_60"/>
+    </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

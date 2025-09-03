@@ -7,7 +7,11 @@ import kotlin.reflect.KProperty
 class PreferenceHelper(private val sharePref: SharedPreferences) {
     companion object {
         const val PREFS_NAME = "Sleep Sound"
+        const val IS_RATED = "is_rated"
     }
+
+    var isRated by BooleanPreference(IS_RATED, false)
+
 
     fun getPreferences(): SharedPreferences {
         return sharePref

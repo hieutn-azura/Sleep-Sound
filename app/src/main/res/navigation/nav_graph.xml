@@ -15,4 +15,38 @@
         android:name="com.hdt.sleepsound.ui.setting.SettingFragment"
         android:label="SettingFragment"
         tools:layout="@layout/fragment_setting"/>
+    <fragment
+        android:id="@+id/sleepSoundFragment"
+        android:name="com.hdt.sleepsound.ui.sleepsound.SleepSoundFragment"
+        android:label="SleepSoundFragment"
+        tools:layout="@layout/fragment_sleep_sound"/>
+    <fragment
+        android:id="@+id/soundFragment"
+        android:name="com.hdt.sleepsound.ui.sleepsound.SoundFragment"
+        android:label="SoundFragment"
+        tools:layout="@layout/fragment_sound">
+        <argument
+            android:name="categoryModel"
+            app:argType="com.hdt.sleepsound.data.model.CategoryModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/recordFragment"
+        android:name="com.hdt.sleepsound.ui.record.RecordFragment"
+        android:label="RecordFragment"
+        tools:layout="@layout/fragment_record"/>
+    <fragment
+        android:id="@+id/mySoundFragment"
+        android:name="com.hdt.sleepsound.ui.mysound.MySoundFragment"
+        android:label="MySoundFragment"
+        tools:layout="@layout/fragment_my_sound">
+        <argument
+            android:name="page"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/mixSoundFragment"
+        android:name="com.hdt.sleepsound.ui.mixsound.MixSoundFragment"
+        android:label="MixSoundFragment"
+        tools:layout="@layout/fragment_mix_sound"/>
 </navigation>

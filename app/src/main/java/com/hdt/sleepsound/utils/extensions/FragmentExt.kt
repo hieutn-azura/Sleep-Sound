@@ -1,6 +1,8 @@
 package com.hdt.sleepsound.utils.extensions
 
+import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.content.res.Resources
 import android.graphics.Rect
 import android.os.Bundle
@@ -9,6 +11,7 @@ import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
+import androidx.core.net.toUri
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
@@ -18,7 +21,11 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.navOptions
+import com.google.android.gms.tasks.Task
+import com.google.android.play.core.review.ReviewInfo
+import com.google.android.play.core.review.ReviewManagerFactory
 import com.hdt.sleepsound.R
+import com.hdt.sleepsound.utils.PreferenceHelper
 
 fun Fragment.navigate(
     destination: Int,
@@ -151,7 +158,6 @@ fun Activity.rateApp(appPreference: PreferenceHelper, onFinish: () -> Unit) {
                 onFinish()
             }
         } else {
-            Log.e("RateApp", "error: " + task.exception.toString())
             onFinish()
         }
     }

@@ -1,3 +1,6 @@
+import java.text.SimpleDateFormat
+import java.util.Date
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -20,11 +23,34 @@ android {
         versionName = "1.0.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        val formattedDate = SimpleDateFormat("MMM.dd.yyyy").format(Date())
+        base.archivesName = "sleep_sound-v$versionName($versionCode)_${formattedDate}"
+    }
+
+    signingConfigs {
+        create("release") {
+            storeFile = rootProject.file("keystores/sleep_sound.jks")
+            storePassword = "123456"
+            keyAlias = "sleep_sound"
+            keyPassword = "123456"
+        }
     }
 
     buildTypes {
         release {
+            isMinifyEnabled = true
+            isDebuggable = false
+            isShrinkResources = true
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+            signingConfig = signingConfigs.getByName("release")
+        }
+        debug {
+            isDebuggable = true
             isMinifyEnabled = false
+            isShrinkResources = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -50,7 +76,7 @@ android {
             buildConfigField("boolean", "build_debug", "true")
         }
         create("product") {
-            applicationId = "com.hdt.sleepsound"
+            applicationId = "com.sleepy.baby.relaxmusic.sleepcycle.relaxation.sleepsounds.whitenoise.rainsounds.sleeptrack.sleepo"
             buildConfigField("boolean", "build_debug", "false")
         }
     }
@@ -70,6 +96,12 @@ dependencies {
     implementation(libs.koin.android.compat)
     implementation(libs.koin.core)
     implementation(libs.glide)
+    implementation(libs.review.ktx)
+    implementation(libs.lottie)
+
+    implementation(libs.androidx.room.ktx)
+    implementation(libs.androidx.room.runtime)
+    ksp(libs.androidx.room.compiler)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

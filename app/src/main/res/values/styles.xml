@@ -34,4 +34,8 @@
     <style name="TabTextStyle" parent="TextAppearance.Design.Tab">
         <item name="textAllCaps">false</item>
     </style>
+
+    <style name="corner_12">
+        <item name="cornerSize">@dimen/dp_12</item>
+    </style>
 </resources>

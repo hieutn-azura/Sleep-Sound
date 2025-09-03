@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">Sleep Sound</string>
-    <string name="sound">Sound</string>
+    <string name="app_name">Calm Sleep: Relax &amp; White Noise</string>
+    <string name="sound">Sound Sleep</string>
     <string name="record">Record</string>
     <string name="my_sound">My sound</string>
     <string name="setting">Setting</string>
@@ -10,4 +10,123 @@
     <string name="setting_term">Terms of Use</string>
     <string name="setting_share_app">Share app</string>
     <string name="setting_rate_app">Rate app</string>
+    <string name="sound_sleep">Sound\nSleep</string>
+    <string name="upload">Upload</string>
+
+    <string name="check_out_this_amazing_app">"Check out this amazing app: "</string>
+    <string name="share_via">Share via</string>
+    <string name="the_best_we_can_get">The best we can get :)</string>
+    <string name="rating_description_0">We would be very grateful if you could rate us.</string>
+    <string name="rating_title_0">Thanks for you support</string>
+    <string name="rating_description_1">Please let us know your feedback to help us improve.</string>
+    <string name="rating_title_1">Oh, no!</string>
+    <string name="rating_description_2">We will try even harder to make you more satisfied.</string>
+    <string name="rating_title_2">Oh No!</string>
+    <string name="rating_description_3">We will try even harder to make you more satisfied.</string>
+    <string name="rating_title_3">Oh, unfortunately!</string>
+    <string name="rating_description_4">We will do our best to provide an even better experience.</string>
+    <string name="rating_title_4">Thank you!</string>
+    <string name="rating_description_5">Your satisfaction is our greatest motivation!</string>
+    <string name="rating_title_5">Wow, fantastic!</string>
+    <string name="rate_on_google_play">Rate on Google Play</string>
+    <string name="please_rate_us">Please rate us 5 stars</string>
+    <string name="thanks_for_your_rating">Thanks for your rating!</string>
+    <string name="rate">Rate</string>
+
+    <string name="abstact_noises">Abstract Noises</string>
+    <string name="ambient_environment">Ambient Environment</string>
+    <string name="animals">Animals</string>
+    <string name="asmr">ASMR</string>
+    <string name="mechanical">Mechanical</string>
+    <string name="musical">Musical</string>
+    <string name="nature_sounds">Nature Sounds</string>
+    <string name="seasonal_ambience">Seasonal Ambience</string>
+    <string name="space">Space</string>
+    <string name="spiritual">Spiritual</string>
+
+    <string name="brown_noise">Brown Noise</string>
+    <string name="brown_noise_350hz">Brown Noise 350hz</string>
+    <string name="grey_noise">Grey Noise</string>
+    <string name="pink_noise">Pink Noise</string>
+    <string name="soft_grey_noise">Soft Grey Noise</string>
+    <string name="white_noise">White Noise</string>
+
+    <string name="coffee_shop">Coffee Shop</string>
+    <string name="people_talking">People Talking</string>
+    <string name="highway">Highway</string>
+    <string name="public_places">Public Places</string>
+    <string name="subway">Subway</string>
+
+    <string name="bird_chirping">Bird chirping</string>
+    <string name="morning_bird">Morning Bird</string>
+    <string name="cricket">Cricket</string>
+    <string name="cricket_2">Cricket 2</string>
+    <string name="frog">Frog</string>
+    <string name="frog_2">Sad Frog</string>
+
+    <string name="asmr_6">ASMR 6</string>
+    <string name="grill_bbq">Grill BBQ</string>
+    <string name="asmr_2">ASMR 2</string>
+    <string name="asmr_3">ASMR 3</string>
+    <string name="asmr_4">ASMR 4</string>
+    <string name="asmr_5">ASMR 5</string>
+
+    <string name="airplane">Airplane</string>
+    <string name="celling_fan">Celling fan</string>
+    <string name="coffee_maker">Coffee Maker</string>
+    <string name="heater">Heater</string>
+    <string name="oscillating_fan">Oscillating fan</string>
+    <string name="train_2">Train 2</string>
+    <string name="train">Train</string>
+    <string name="vacuum_cleaner">Vacuum cleaner</string>
+
+    <string name="binalural_beats">Binaural Beats</string>
+    <string name="piano_2">Piano 2</string>
+    <string name="piano_3">Piano 3</string>
+    <string name="piano_4">Piano 4</string>
+    <string name="piano">Piano</string>
+    <string name="rain_drum">Rain Drum</string>
+    <string name="synth_pad">Synth Pad</string>
+
+    <string name="gentle_breeze">Gentle Breeze</string>
+    <string name="heavy_rain_with_thunder">Heavy Rain with Thunder</string>
+    <string name="heavy_rain">Heavy Rain</string>
+    <string name="ocean_waves">Ocean Waves</string>
+    <string name="rain_with_thunder">Rain with Thunder 2</string>
+    <string name="rain">Rain</string>
+    <string name="soothing_wind">Soothing wind sound</string>
+    <string name="strong_wind">Strong Wind</string>
+    <string name="thunder">Thunder</string>
+    <string name="water_fall">Waterfall</string>
+    <string name="wind">Wind</string>
+
+    <string name="blizzard">Blizzard</string>
+    <string name="dried_leaves">Dried Leaves</string>
+    <string name="heavy_snowstorm">Heavy Snowstorm</string>
+    <string name="leaves_falling">Leaves Falling</string>
+    <string name="snow_storm">Snowstorm and Howling Wind</string>
+
+    <string name="black_hole">Black hole</string>
+    <string name="earth">Earth</string>
+    <string name="saturn">Saturn</string>
+    <string name="spaceship_ambience">Spaceship Ambience</string>
+    <string name="spaceship_cockpit">Spaceship Cockpit</string>
+    <string name="sun">Sun</string>
+
+    <string name="om_chanting">OM Chanting</string>
+    <string name="temple_bell_2">Temple Bell 2</string>
+    <string name="temple_bell">Temple Bell</string>
+    <string name="tibetan_bowls_2">Tibetan Bowls 2</string>
+    <string name="tibetan_bowls_3">Tibetan Bowls 3</string>
+    <string name="tibetan_bowls">Tibetan Bowls</string>
+
+    <string name="format_timer">%1$02d:%2$02d:%3$02d</string>
+    <string name="timer">Timer</string>
+    <string name="text_save">Save</string>
+    <string name="hour">Hour</string>
+    <string name="minutes">Minutes</string>
+    <string name="text_cancel">Cancel</string>
+    <string name="you_don_t_any_record">You don\'t have any record</string>
+    <string name="des_warning">Your sound has not been saved. Are you sure you want to leave?</string>
+    <string name="exit">Exit</string>
 </resources>
