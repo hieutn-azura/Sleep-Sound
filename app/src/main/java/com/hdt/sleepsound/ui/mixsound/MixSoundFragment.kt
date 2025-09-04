@@ -21,6 +21,7 @@ import com.hdt.sleepsound.utils.extensions.navigate
 import com.hdt.sleepsound.utils.extensions.popBackStack
 import com.hdt.sleepsound.utils.extensions.resetSelection
 import com.hdt.sleepsound.utils.extensions.showDialog
+import com.hdt.sleepsound.utils.extensions.showToast
 import com.hdt.sleepsound.utils.extensions.visible
 import kotlinx.coroutines.launch
 import org.koin.android.ext.android.inject
@@ -136,6 +137,7 @@ class MixSoundFragment: BaseFragment<FragmentMixSoundBinding>() {
                         )
 
                         navigate(R.id.mySoundFragment, MySoundFragmentArgs(1).toBundle())
+                        showToast(getContextF().getString(R.string.save_successfull))
                     }
                 }
             })

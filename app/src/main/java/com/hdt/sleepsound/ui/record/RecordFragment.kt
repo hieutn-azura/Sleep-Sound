@@ -27,6 +27,7 @@ import com.hdt.sleepsound.utils.extensions.navigate
 import com.hdt.sleepsound.utils.extensions.openSettingApplication
 import com.hdt.sleepsound.utils.extensions.popBackStack
 import com.hdt.sleepsound.utils.extensions.showDialog
+import com.hdt.sleepsound.utils.extensions.showToast
 import com.hdt.sleepsound.utils.extensions.visible
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -56,9 +57,14 @@ class RecordFragment : BaseFragment<FragmentRecordBinding>() {
         }
     }
 
-    private var isPermission = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+    private var isPermission = if (Build.VERSION.SDK_INT < Build.VERSION_CODES.Q) {
+        Manifest.permission.WRITE_EXTERNAL_STORAGE
+        Manifest.permission.READ_EXTERNAL_STORAGE
+    } else if (Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU) {
+        Manifest.permission.READ_EXTERNAL_STORAGE
+    } else {
         Manifest.permission.READ_MEDIA_AUDIO
-    } else Manifest.permission.WRITE_EXTERNAL_STORAGE
+    }
 
     private var recorder: MediaRecorder? = null
     private var timerJob: Job? = null
@@ -135,6 +141,7 @@ class RecordFragment : BaseFragment<FragmentRecordBinding>() {
             )
         )
         navigate(R.id.mySoundFragment)
+        showToast(getContextF().getString(R.string.save_successfull))
     }
 
     private fun requestPermissions() {
